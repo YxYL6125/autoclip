@@ -2451,5 +2451,15 @@
   "editing_style.import_zip": "Importer .zip",
   "editing_style.importing": "Importation…",
   "editing_style.uninstall": "Supprimer le modèle",
-  "editing_style.new_count": "{{count}} nouveaux modèles"
+  "editing_style.new_count": "{{count}} nouveaux modèles",
+  "exportFolder.title": "Dossier d’exportation par défaut",
+  "exportFolder.hint": "Change uniquement où les nouveaux fichiers sont enregistrés. Aucun projet, vidéo source ou export existant n’est déplacé.",
+  "exportFolder.browser": "Sur le web, le navigateur contrôle le lieu d’enregistrement.",
+  "exportFolder.choose": "Choisir un dossier",
+  "exportFolder.reset": "Utiliser Téléchargements",
+  "exportFolder.retry": "Relire",
+  "exportFolder.unavailable": "Dossier indisponible. Choisissez-en un autre.",
+  "exportFolder.readError": "Impossible de lire la préférence. Choisissez à nouveau ou réinitialisez-la.",
+  "exportFolder.saveError": "La préférence n’a pas été enregistrée. La précédente est inchangée ; réessayez.",
+  "文件已保存": "File saved"
 }

@@ -2451,5 +2451,15 @@
   "editing_style.import_zip": "Importar .zip",
   "editing_style.importing": "Importando…",
   "editing_style.uninstall": "Eliminar plantilla",
-  "editing_style.new_count": "{{count}} plantillas nuevas"
+  "editing_style.new_count": "{{count}} plantillas nuevas",
+  "exportFolder.title": "Carpeta de exportación predeterminada",
+  "exportFolder.hint": "Solo cambia dónde se guardan archivos nuevos. No mueve proyectos, vídeos originales ni exportaciones existentes.",
+  "exportFolder.browser": "En la web, el navegador controla la ubicación de guardado.",
+  "exportFolder.choose": "Elegir carpeta",
+  "exportFolder.reset": "Usar Descargas",
+  "exportFolder.retry": "Volver a leer",
+  "exportFolder.unavailable": "La carpeta no está disponible. Elige otra.",
+  "exportFolder.readError": "No se puede leer la preferencia. Elige de nuevo o restablécela.",
+  "exportFolder.saveError": "La preferencia no se guardó. La anterior no cambió; inténtalo de nuevo.",
+  "文件已保存": "File saved"
 }

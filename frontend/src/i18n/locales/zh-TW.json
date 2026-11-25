@@ -2451,5 +2451,15 @@
   "editing_style.import_zip": "匯入範本包",
   "editing_style.importing": "匯入中…",
   "editing_style.uninstall": "移除範本",
-  "editing_style.new_count": "發現 {{count}} 款新範本"
+  "editing_style.new_count": "發現 {{count}} 款新範本",
+  "exportFolder.title": "預設匯出資料夾",
+  "exportFolder.hint": "只變更新儲存檔案的位置，不移動專案、原片或既有成片。",
+  "exportFolder.browser": "網頁版的儲存位置由瀏覽器設定決定。",
+  "exportFolder.choose": "選擇資料夾",
+  "exportFolder.reset": "使用下載資料夾",
+  "exportFolder.retry": "重新讀取",
+  "exportFolder.unavailable": "匯出資料夾無法使用，請重新選擇。",
+  "exportFolder.readError": "無法讀取匯出目錄設定，請重新選擇或重設。",
+  "exportFolder.saveError": "匯出目錄設定未儲存，原設定保持不變，請重試。",
+  "文件已保存": "檔案已儲存"
 }

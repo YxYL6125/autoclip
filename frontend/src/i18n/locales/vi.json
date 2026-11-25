@@ -2451,5 +2451,15 @@
   "editing_style.import_zip": "Nhập .zip",
   "editing_style.importing": "Đang nhập…",
   "editing_style.uninstall": "Gỡ mẫu",
-  "editing_style.new_count": "{{count}} mẫu mới"
+  "editing_style.new_count": "{{count}} mẫu mới",
+  "exportFolder.title": "Thư mục xuất mặc định",
+  "exportFolder.hint": "Chỉ thay đổi nơi lưu tệp mới. Không di chuyển dự án, video gốc hoặc bản xuất hiện có.",
+  "exportFolder.browser": "Trên web, trình duyệt quyết định nơi lưu tệp.",
+  "exportFolder.choose": "Chọn thư mục",
+  "exportFolder.reset": "Dùng thư mục Tải xuống",
+  "exportFolder.retry": "Đọc lại",
+  "exportFolder.unavailable": "Thư mục xuất không khả dụng. Hãy chọn thư mục khác.",
+  "exportFolder.readError": "Không đọc được tùy chọn. Hãy chọn lại hoặc đặt lại.",
+  "exportFolder.saveError": "Tùy chọn chưa được lưu. Thiết lập cũ không thay đổi; hãy thử lại.",
+  "文件已保存": "File saved"
 }

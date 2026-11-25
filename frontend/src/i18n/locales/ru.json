@@ -2451,5 +2451,15 @@
   "editing_style.import_zip": "Импорт .zip",
   "editing_style.importing": "Импорт…",
   "editing_style.uninstall": "Удалить шаблон",
-  "editing_style.new_count": "Новых шаблонов: {{count}}"
+  "editing_style.new_count": "Новых шаблонов: {{count}}",
+  "exportFolder.title": "Папка экспорта по умолчанию",
+  "exportFolder.hint": "Меняется только место сохранения новых файлов. Проекты, исходные видео и готовые файлы не перемещаются.",
+  "exportFolder.browser": "В веб-версии место сохранения задаёт браузер.",
+  "exportFolder.choose": "Выбрать папку",
+  "exportFolder.reset": "Использовать Загрузки",
+  "exportFolder.retry": "Прочитать снова",
+  "exportFolder.unavailable": "Папка недоступна. Выберите другую.",
+  "exportFolder.readError": "Не удалось прочитать настройку. Выберите папку снова или сбросьте настройку.",
+  "exportFolder.saveError": "Настройка не сохранена. Предыдущая не изменена; повторите попытку.",
+  "文件已保存": "File saved"
 }
