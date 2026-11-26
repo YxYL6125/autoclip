@@ -1117,11 +1117,18 @@ test('R28 readiness timeout 5s (behaviour, fake timers): the probe and the follo
   }, dir).studioApi
   t.mock.timers.enable({ apis: ['setTimeout'] })
   const live = new Map()
-  // axios' fetch adapter with a backend that never answers: the request ends only when its signal aborts.
+  const pending = new Set()
+  // The mock transport owns each Request until it settles. Keeping only its URL lets
+  // the native Request and followed AbortSignal be collected while fetch is pending.
   const fetch = (url, init) => new Promise((resolve, reject) => {
     const signal = url instanceof Request ? url.signal : init.signal
+    const request = url instanceof Request ? url : signal
+    pending.add(request)
     const key = String(url.url ?? url); live.set(key, 'open')
-    signal.addEventListener('abort', () => { live.set(key, 'aborted'); reject(signal.reason ?? new Error('aborted')) })
+    signal.addEventListener('abort', () => {
+      pending.delete(request)
+      live.set(key, 'aborted'); reject(signal.reason ?? new Error('aborted'))
+    }, { once: true })
   })
   api.defaults.adapter = 'fetch'; api.defaults.env = { ...api.defaults.env, fetch, Request, Response }
   const round = new AbortController()
@@ -1137,6 +1144,7 @@ test('R28 readiness timeout 5s (behaviour, fake timers): the probe and the follo
   for (let i = 0; i < 50 && Object.keys(outcomes).length < 2; i++) await new Promise(r => setImmediate(r))
   const at5s = [...live.values()]
   round.abort(); await all // a mutant that never times out must not hang the file
+  assert.equal(pending.size, 0, 'the mock transport releases settled requests')
   assert.deepEqual(at5s, ['aborted', 'aborted'], 'aborted at 5s')
   // axios' timeout code: ECONNABORTED from the xhr adapter (the app), ETIMEDOUT from fetch (here); no response either way
   assert.deepEqual(outcomes, { probe: 'timeout', read: 'timeout' }, 'a timeout (no response): the controller counts it as unreachable')
